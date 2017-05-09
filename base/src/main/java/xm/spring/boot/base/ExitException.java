@@ -8,5 +8,4 @@ public class ExitException extends RuntimeException implements ExitCodeGenerator
 	public int getExitCode() {
 		return 10;
 	}
-
 }
