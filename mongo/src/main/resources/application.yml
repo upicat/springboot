@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      # uri: ${vcap.services.${PREFIX:}mongodb.credentials.uri:mongodb://${MONGODB_HOST:dockerhost}:${MONGODB_PORT:27017}/local}
+      # the same
+      uri: mongodb://dockerhost:27017/local

@@ -1,0 +1,3 @@
+spring:
+  rabbitmq:
+      addresses: ${vcap.services.${PREFIX:}rabbitmq.credentials.uri:amqp://${RABBITMQ_HOST:dockerhost}:${RABBITMQ_PORT:5672}}
