@@ -10,13 +10,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Tests for {@link SampleSimpleApplication}.
+ * Tests for {@link SampleApplication}.
  *
  * @author Dave Syer
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SampleSimpleApplicationTests {
+public class SampleApplicationTests {
 
 	@Autowired
 	ApplicationContext ctx;
