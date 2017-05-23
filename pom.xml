@@ -23,6 +23,7 @@
 		<module>mybatis</module>
 		<module>rabbitmq</module>
 		<module>base</module>
+		<module>thymeleaf</module>
 	</modules>
 
 	<properties>
