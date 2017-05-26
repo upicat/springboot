@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Hello World!</title>
+<script type="text/javascript">
+var a = function(r) {
+    if (/(^\d{15}$)|(^\d{17}([0-9]|X)$)/.test(r)) {
+        var s = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2],
+        a = ["1", "0", "X", "9", "8", "7", "6", "5", "4", "3", "2"];
+        if (15 == r.length) {
+            var u = r.match(/^(\d{6})(\d{2})(\d{2})(\d{2})(\d{3})$/),
+            o = new Date("19" + u[2] + "/" + u[3] + "/" + u[4]);
+            if ("Invalid Date" != o) {
+                var l, d = 0;
+                for (r = r.substr(0, 6) + "19" + r.substr(6, r.length - 6), l = 0; 17 > l; l++) d += r.substr(l, 1) * s[l];
+                r += a[d % 11]
+            }
+        }
+        if (18 == r.length) {
+            var u = r.match(/^(\d{6})(\d{4})(\d{2})(\d{2})(\d{3})([0-9]|X)$/),
+            o = new Date(u[2] + "/" + u[3] + "/" + u[4]);
+            if ("Invalid Date" != o) {
+                var f, l, d = 0;
+                for (l = 0; 17 > l; l++) d += r.substr(l, 1) * s[l];
+                if (f = a[d % 11], f == r.substr(17, 1)) return;
+            }
+        }
+    }
+};
+</script>
+</head>
+<body>
+	What's your name?:
+</body>
+</html>

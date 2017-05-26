@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Hello World!</title>
+<link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="/webjars/angularjs/angular.min.js"></script>
+<script type="text/javascript">
+	var app = angular.module('app', []);
+
+	app.controller('ParentController', function($scope) {
+		$scope.person = {
+			greeted : false
+		};
+	});
+
+	app.controller('ChildController', function($scope) {
+		$scope.sayHello = function() {
+			$scope.person.greeted = true;
+		}
+	});
+</script>
+</head>
+<body ng-app="app">
+	<div ng-controller="ParentController">
+		<div ng-controller="ChildController">
+			<input type="text" ng-model="person.name" placeholder="Name"></input>
+			<a ng-click="sayHello()">Say hello</a>
+		</div>
+		{{ person }}
+	</div>
+</body>
+</html>

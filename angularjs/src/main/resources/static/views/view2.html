@@ -1,0 +1,29 @@
+  <div class="row">
+    <label for="attr" class="col-md-2 control-label">属性形式</label>
+    <div class="col-md-2">
+      <input type="text" class="form-control" date-picker>
+    </div>
+  </div>
+  
+  <div class="row">
+    <label for="style" class="col-md-2 control-label">样式形式</label>
+    <div class="col-md-2">
+      <input type="text" class="form-control date-picker" >
+    </div>
+  </div>
+  -----------------
+ <label for="exampleInput">Pick a date in 2013:</label>
+   <input type="date" id="exampleInput" name="input" ng-model="example.value"
+       placeholder="yyyy-MM-dd" min="2013-01-01" max="2013-12-31" required />
+  <!--  It's not ok in firefox.
+<input type="date"
+       ng-model="string"
+       [name="string"]
+       [min="string"]
+       [max="string"]
+       [ng-min=""]
+       [ng-max=""]
+       [required="string"]
+       [ng-required="string"]
+       [ng-change="string"]>
+        -->
