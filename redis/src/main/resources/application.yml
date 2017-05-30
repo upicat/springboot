@@ -1,0 +1,8 @@
+logging:
+  level:
+    org.springframework.data: 'DEBUG'
+    
+spring:
+  redis:
+    database: 0
+    host: dockerhost
