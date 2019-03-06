@@ -96,6 +96,11 @@ public class Java8Test {
         // jdeps jar|.class|directory
         
         // 12 jjs
+        
+        // 13 other
+        Arrays.asList(1,2,3).stream().map(num -> num+1).forEach( System.out::println);
+        Arrays.asList(1,2,3).stream().map(num -> num+1).collect(Collectors.toList()).forEach( System.out::println);
+
 	}
 
 	interface DefaulableFactory {
